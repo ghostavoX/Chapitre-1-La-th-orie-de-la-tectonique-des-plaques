@@ -684,6 +684,58 @@
                 gap: 5px;
             }
         }
+
+        /* ADDing for mobile   */
+        @media (max-width: 768px) {
+    /* Compact header */
+    header,
+    body.slider header {
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-radius: 10px;
+    }
+    header h1,
+    body.slider header h1 {
+        font-size: 1.05rem;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
+    header p,
+    body.slider header p {
+        font-size: 0.8rem;
+        line-height: 1.25;
+    }
+    .badge-bar { display: none; }
+
+    /* Compact dashboard: bar + score on one row, button below */
+    .dashboard,
+    body.slider .dashboard {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 6px 10px;
+        padding: 6px 10px;
+        margin-bottom: 8px;
+    }
+    .progress-container { min-width: 0; }
+    .progress-container label { display: none; }
+    .progress-bar-bg { height: 10px; }
+    .score-display {
+        font-size: 0.9rem;
+        padding: 3px 10px;
+        border-width: 1px;
+        white-space: nowrap;
+    }
+    .verify-btn {
+        grid-column: 1 / -1;
+        padding: 7px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* Slightly tighter content */
+    .section-title { font-size: 1rem; padding: 8px 12px; margin: 12px 0 8px; }
+    .card { padding: 14px; }
+}
     </style>
 </head>
 
